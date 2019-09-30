@@ -82,13 +82,8 @@ class TicTacToe
   end
 
   def winner
-    won?.each do |position, player|
-      if player == "X"
-        puts "X"
-      elsif player == "O"
-        puts "O"
-      end
-    end
+    if winning_combo = won?
+    @board[winning_combo.first]
   end
 
 end
