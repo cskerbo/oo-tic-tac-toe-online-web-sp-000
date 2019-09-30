@@ -59,26 +59,32 @@ class TicTacToe
     else
       turn
     end
-end
-
-def won?
-  WIN_COMBINATIONS.detect do |combo|
-    @board[combo[0]] == @board[combo[1]] &&
-    @board[combo[1]] == @board[combo[2]] &&
-    position_taken?(combo[0])
   end
-end
 
-def full?
-  @board.all? { |token| token == 'X' || token == 'O' }
-end
+  def won?
+    WIN_COMBINATIONS.detect do |combo|
+      @board[combo[0]] == @board[combo[1]] &&
+      @board[combo[1]] == @board[combo[2]] &&
+      position_taken?(combo[0])
+    end
+  end
 
-def draw?
-  !won? && full?
-end
+  def full?
+    @board.all? { |token| token == 'X' || token == 'O' }
+  end
 
-def over?
-  won? || draw?
-end
+  def draw?
+    !won? && full?
+  end
+
+  def over?
+    won? || draw?
+  end
+
+  def winner(board)
+    if won?
+      board[winning_combo.first]
+    end
+  end
 
 end
