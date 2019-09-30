@@ -83,7 +83,7 @@ class TicTacToe
 
   def winner
     if won?
-      @board[combo.first]
+      @board[WIN_COMBINATIONS.first]
     end
   end
 
