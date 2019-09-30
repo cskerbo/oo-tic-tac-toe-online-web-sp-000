@@ -82,9 +82,9 @@ class TicTacToe
   end
 
   def winner
-    won?.each do |token|
+    won?.first do |token|
       if token == "X"
-        puts "X"
+        return "X"
       else
         puts "O"
       end
