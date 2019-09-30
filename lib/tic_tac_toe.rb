@@ -86,7 +86,7 @@ class TicTacToe
       if token == "X"
         return "X"
       else
-        puts "O"
+        return "O"
       end
     end
   end
