@@ -82,7 +82,7 @@ class TicTacToe
   end
 
   def winner
-    winner = won?
+    winner = [won?]
     winner.each do |position, player|
       if player == "X"
         puts "X"
