@@ -82,9 +82,7 @@ class TicTacToe
   end
 
   def winner
-    if won?
-      position_taken?(combo[0])
-    end
+    won?
   end
 
 end
