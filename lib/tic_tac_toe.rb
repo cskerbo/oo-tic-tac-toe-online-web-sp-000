@@ -73,4 +73,8 @@ def full?
   @board.all? { |token| token == 'X' || token == 'O' }
 end
 
+def draw?
+  !won? && full?
+end
+
 end
