@@ -83,10 +83,10 @@ class TicTacToe
 
   def winner
     array = [won?]
-    array.first do |token|
+    array.each do |token|
       if token == "X"
         puts "X"
-      else
+      elsif token == "O"
         puts "O"
       end
     end
