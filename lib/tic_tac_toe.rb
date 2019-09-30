@@ -81,7 +81,7 @@ class TicTacToe
     won? || draw?
   end
 
-  def winner(board)
+  def winner
     won?.each do |token|
       if token == "X"
         puts "X"
