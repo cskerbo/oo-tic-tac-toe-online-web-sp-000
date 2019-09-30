@@ -53,7 +53,7 @@ class TicTacToe
     puts "Please enter 1-9:"
     user_input = gets.strip
     input_to_index(user_input)
-    if valid_move?(index)
+    if valid_move?
       move
     else
       turn
