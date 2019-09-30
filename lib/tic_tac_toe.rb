@@ -85,9 +85,9 @@ class TicTacToe
     array = won?
     array.each do |token|
       if token == "X"
-        return "X"
+        puts "X"
       else
-        return "O"
+        puts "O"
       end
     end
   end
